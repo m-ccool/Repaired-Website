@@ -5,12 +5,19 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>website</title>
+
+    <script type="text/javascript" 
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
+    </script>
+
+   
 </head>
 
 <body>
     <div class="header">
         <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
+        
+                <div id="header-nav-list">
             <ul>
                 <li>
                     <a href="#search-engine-optimization">Search Engine Optimization</a>
@@ -23,10 +30,40 @@
                 </li>
             </ul>
         </div>
+
+        <div class="mobile-nav-btn">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Menu
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#search-engine-optimization">Search Engine Optimization</a>
+                    <a href="#online-reputation-management">Online Reputation Management</a>
+                    <a href="#social-media-marketing">Social Media Marketing</a>
+                </div>
+
+                <script>
+                    function myFunction() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(e) {
+                      if (!e.target.matches('.dropbtn')) {
+                      var myDropdown = document.getElementById("myDropdown");
+                        if (myDropdown.classList.contains('show')) {
+                          myDropdown.classList.remove('show');
+                        }
+                      }
+                    }
+                    </script>
+            </div> 
+        </div>
+
     </div>
     <div class="hero"></div>
     <div class="content">
-        <div class="search-engine-optimization">
+        <div id="search-engine-optimization" class="search-engine-optimization">
             <img src="./assets/images/search-engine-optimization.jpg" alt="search engine optimization image" class="float-left">
             <h2>Search Engine Optimization</h2>
             <p>
