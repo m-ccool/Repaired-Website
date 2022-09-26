@@ -173,7 +173,7 @@ p {
 
 @media (max-width:788px) {
     .benefits {
-        margin: none;
+        margin: 0 25%;
         width: 50%;
 
     }
